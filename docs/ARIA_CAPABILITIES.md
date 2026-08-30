@@ -180,7 +180,7 @@ ARIA should avoid applying location-sensitive conclusions without appropriate ge
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -218,7 +218,7 @@ Validation Status
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -254,7 +254,7 @@ The original measurement should remain traceable where practical.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -350,7 +350,7 @@ Validation Status
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -407,7 +407,7 @@ Potentially:
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -488,7 +488,7 @@ Represent water as a core environmental capacity variable.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -527,7 +527,7 @@ Capacity / Risk
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -587,7 +587,7 @@ They must not be silently treated as equivalent.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -617,7 +617,7 @@ It does not grant permits or provide legal certification.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -707,7 +707,7 @@ A capacity assessment should not be reduced to an unexplained single number.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -792,7 +792,7 @@ Risk should be accompanied by:
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -881,7 +881,7 @@ What additional information would improve the assessment?
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -914,7 +914,7 @@ False Certainty
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -947,7 +947,7 @@ Potential triggers include:
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -977,7 +977,7 @@ ARIA does not own decisions.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -1010,7 +1010,7 @@ Important claims should be connected to supporting evidence where practical.
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -1102,7 +1102,7 @@ ARIA should follow data minimization and appropriate access-control principles.
 
 ## Status
 
-`PLANNED`
+`IN DEVELOPMENT`
 
 ---
 
@@ -1147,7 +1147,7 @@ AI capabilities should additionally consider:
 
 ## Status
 
-`PLANNED`
+`PROTOTYPE`
 
 ---
 
@@ -1371,20 +1371,18 @@ The prototype should prove depth through a smaller number of working workflows.
 
 # 39. Recommended Hackathon Capability Slice
 
-A practical demonstration slice may connect:
+The implemented hackathon slice connects:
 
 ```text
-Input
+Manual Structured Input
  ↓
 Evidence Ingestion
  ↓
 Validation
  ↓
-Environmental Analysis
+Soil / Water / Terrain / Ecology Findings
  ↓
-Regulatory Context
- ↓
-Agentic Orchestration
+User-Supplied Regulatory Context
  ↓
 Environmental Capacity
  ↓
@@ -1393,9 +1391,9 @@ Evidence / Explanation
 Human Decision Support
 ```
 
-This demonstrates the central ARIA idea without requiring the entire long-term platform to be production-complete.
+This demonstrates the central ARIA idea without representing the long-term platform as complete.
 
-The exact implementation slice should be selected after the baseline and Bob development workflow are established.
+Agentic orchestration belongs to the IBM Bob development workflow for this prototype. It is not implemented as an ARIA runtime capability.
 
 ---
 
@@ -1435,11 +1433,11 @@ Do not allow the size of the capability list to replace actual working functiona
 
 # 41. Current Capability State
 
-At version 1.0, ARIA is in the foundational architecture phase.
+At version 1.0, ARIA has a bounded functional prototype built on the foundational architecture.
 
-The repository should therefore treat the capability map as a specification.
+Only the limited capabilities referenced in the tracking table are demonstrated. `PROTOTYPE` means working in the controlled Streamlit demonstration, not scientifically validated or production-ready.
 
-The presence of a capability in this document does not mean that the capability has been implemented.
+The presence of any other capability in this document does not mean it has been implemented.
 
 As development proceeds, each capability should be updated with:
 
@@ -1455,39 +1453,39 @@ Known Limitations
 
 # 42. Capability Tracking Table
 
-The project may maintain a live table similar to:
+The current live tracking table is:
 
 | ID | Capability | Status | Implementation | Tests | Evidence |
 |---|---|---|---|---|---|
 | C01 | Multimodal Input | PLANNED | — | — | — |
-| C02 | Location & Context | PLANNED | — | — | — |
-| C03 | Evidence Ingestion | PLANNED | — | — | — |
-| C04 | Validation & Normalization | PLANNED | — | — | — |
+| C02 | Location & Context | PROTOTYPE | `app.py` | `test_app.py` | Manual location and jurisdiction only |
+| C03 | Evidence Ingestion | PROTOTYPE | `app.py`, `models.py` | `test_app.py` | Manual form input only |
+| C04 | Validation & Normalization | PROTOTYPE | `engine.py` | `test_engine.py` | Metadata, ranges, enumerations, and dates |
 | C05 | Scientific Knowledge | PLANNED | — | — | — |
-| C06 | Environmental Indicators | PLANNED | — | — | — |
-| C07 | Soil Intelligence | PLANNED | — | — | — |
+| C06 | Environmental Indicators | PROTOTYPE | `models.py` | `test_engine.py` | Five bounded indicators |
+| C07 | Soil Intelligence | PROTOTYPE | `engine.py` | `test_engine.py` | Illustrative pH logic only |
 | C08 | Plant Intelligence | PLANNED | — | — | — |
 | C09 | Climate Intelligence | PLANNED | — | — | — |
-| C10 | Water Intelligence | PLANNED | — | — | — |
-| C11 | Ecological Intelligence | PLANNED | — | — | — |
+| C10 | Water Intelligence | PROTOTYPE | `engine.py` | `test_engine.py` | User-supplied availability category only |
+| C11 | Ecological Intelligence | PROTOTYPE | `engine.py` | `test_engine.py` | User-supplied sensitivity category only |
 | C12 | Geospatial Intelligence | PLANNED | — | — | — |
-| C13 | Temporal Intelligence | PLANNED | — | — | — |
-| C14 | Regulatory Intelligence | PLANNED | — | — | — |
+| C13 | Temporal Intelligence | PROTOTYPE | `models.py`, `engine.py` | `test_engine.py` | Observation date and future-date validation |
+| C14 | Regulatory Intelligence | PROTOTYPE | `engine.py` | `test_engine.py` | User-supplied status; no legal retrieval or interpretation |
 | C15 | Regulatory Conflict | PLANNED | — | — | — |
-| C16 | Environmental Capacity | PLANNED | — | — | — |
+| C16 | Environmental Capacity | PROTOTYPE | `engine.py` | `test_engine.py` | Multidomain status without composite score |
 | C17 | Industrial Compatibility | VISION | — | — | — |
-| C18 | Risk Analysis | PLANNED | — | — | — |
+| C18 | Risk Analysis | PROTOTYPE | `engine.py` | `test_engine.py` | Bounded constraints and review gates only |
 | C19 | Agentic Orchestration | PLANNED | — | — | — |
-| C20 | Evidence & Explainability | PLANNED | — | — | — |
-| C21 | Uncertainty | PLANNED | — | — | — |
-| C22 | Human-in-the-Loop | PLANNED | — | — | — |
-| C23 | Decision Support | PLANNED | — | — | — |
-| C24 | Reporting | PLANNED | — | — | — |
+| C20 | Evidence & Explainability | PROTOTYPE | `models.py`, `app.py` | `test_engine.py`, `test_app.py` | Evidence IDs, findings, gaps, and next actions |
+| C21 | Uncertainty | PROTOTYPE | `models.py`, `engine.py` | `test_engine.py` | Explicit low, moderate, and high states |
+| C22 | Human-in-the-Loop | PROTOTYPE | `engine.py`, `app.py` | `test_engine.py` | Human review always required |
+| C23 | Decision Support | PROTOTYPE | `engine.py`, `app.py` | `test_engine.py`, `test_app.py` | Non-authoritative status only |
+| C24 | Reporting | PROTOTYPE | `app.py` | `test_app.py` | On-screen assessment only |
 | C25 | API Integration | PLANNED | — | — | — |
 | C26 | Observability | PLANNED | — | — | — |
-| C27 | Security & Privacy | PLANNED | — | — | — |
-| C28 | Evaluation & Validation | PLANNED | — | — | — |
-| C29 | IBM Bob-Assisted Development | IN DEVELOPMENT | — | — | — |
+| C27 | Security & Privacy | IN DEVELOPMENT | `.gitignore`, `.bobignore`, `check_secrets.py` | CI secret check | Repository controls only |
+| C28 | Evaluation & Validation | PROTOTYPE | `tests/`, CI | 14 automated tests | Functional validation, not scientific validation |
+| C29 | IBM Bob-Assisted Development | IN DEVELOPMENT | `reports/bob/` | Evidence required | Claim only retained, genuine Bob activity |
 
 This table should be updated during implementation.
 

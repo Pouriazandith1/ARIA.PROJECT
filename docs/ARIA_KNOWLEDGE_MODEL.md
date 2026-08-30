@@ -1372,25 +1372,25 @@ The long-term model may evolve toward:
 
 The knowledge model does not require every conceptual component to be implemented immediately.
 
-The initial prototype should establish a minimal, real, testable path through the model.
-
-For example:
+The current prototype establishes this minimal, real, testable path:
 
 ```text
-Input
+Manual Input
  ↓
-Evidence
+Evidence Record
  ↓
-Indicator
+Validation
  ↓
-Environmental Context
+Domain Finding
  ↓
-Analysis
+Environmental Capacity Status
  ↓
-Evidence-backed Output
+Evidence / Uncertainty Explanation
+ ↓
+Human Review
 ```
 
-Additional domains can then be added without redesigning the conceptual foundation.
+The prototype does not implement external knowledge retrieval, source verification, a knowledge graph, validated scientific rules, regulatory interpretation, or agentic knowledge orchestration. Additional domains can be added without redesigning the conceptual foundation.
 
 ---
 

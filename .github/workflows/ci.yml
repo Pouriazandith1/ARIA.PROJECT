@@ -1,0 +1,31 @@
+name: Validate ARIA
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Check Python style
+        run: |
+          ruff check app.py src tests scripts
+          ruff format --check app.py src tests scripts
+      - name: Compile Python
+        run: python -m compileall app.py src tests scripts
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Scan for committed credentials
+        run: python scripts/check_secrets.py
+      - name: Validate documentation
+        run: python scripts/check_docs.py

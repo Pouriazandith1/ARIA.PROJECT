@@ -1207,24 +1207,35 @@ The objective is to demonstrate how IBM technology enables the development of AR
 
 # 37. Current Project State
 
-At the creation of this constitution, the repository is a foundation rather than a completed application.
+ARIA now includes a bounded hackathon prototype while remaining far from a completed platform.
 
 The repository currently contains:
 
 ```text
 ARIA-PROJECT/
+├── app.py
+├── requirements.txt
 ├── docs/
-│   └── .gitkeep
+│   ├── governing specifications
+│   ├── demo script
+│   └── submission checklist
 ├── reports/
-│   └── .gitkeep
+│   ├── baseline/
+│   ├── bob/
+│   └── validation/
 ├── src/
-│   └── .gitkeep
+│   └── aria_core/
+├── tests/
+├── scripts/
+├── .github/workflows/
 ├── .gitignore
-├── LICENSE
+├── .env.example
 └── README.md
 ```
 
-This constitution therefore defines the intended system and development rules; it does not claim that the described architecture is already implemented.
+The implemented slice accepts manually entered evidence, validates it, produces separate soil, water, terrain, ecology, and regulatory findings, derives a non-authoritative environmental-capacity status, exposes uncertainty, and requires human review.
+
+External data retrieval, validated scientific knowledge, regulatory interpretation, multimodal input, geospatial analysis, agentic runtime orchestration, APIs, and production infrastructure remain unimplemented.
 
 ---
 
@@ -1243,18 +1254,20 @@ The intended development sequence is:
       ↓
 5. Development Workflow
       ↓
-6. Baseline Measurement
+6. Repository Baseline
       ↓
-7. Bob-Assisted Implementation
+7. Bounded Prototype
       ↓
 8. Testing
       ↓
 9. Validation
       ↓
-10. Demonstration
+10. Bob Workflow Evidence
+      ↓
+11. Demonstration
 ```
 
-No major implementation should begin before its requirements and acceptance criteria are sufficiently understood.
+The current priority is to validate the bounded prototype, record genuine IBM Bob workflow evidence, collect real measurements, and present limitations accurately.
 
 ---
 
