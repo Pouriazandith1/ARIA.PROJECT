@@ -16,7 +16,7 @@
 - ❌ Never hardcode API keys in your code
 - ❌ Never commit `.env` files
 - ❌ Never share credentials in code comments
-- ❌ Never commit files with "credential", "secret", or "password" in the name
+- ❌ Never commit live credentials, regardless of the filename
 - ❌ Never remove patterns from `.gitignore` or `.bobignore`
 - ❌ Never paste credentials in AI assistant prompts
 
@@ -24,7 +24,7 @@
 
 ### The Risk
 
-AI assistants log your prompts and code in session history files. If you share credentials with them, those credentials may be logged!
+AI-assisted development tools may retain prompts, context, code, command output, or session artifacts. Treat any credential shared with a tool as exposed.
 
 ### Safe Practices:
 
@@ -41,18 +41,21 @@ AI assistants log your prompts and code in session history files. If you share c
 
 ### Protection:
 
-- `.bobignore` prevents Bob from logging credential patterns
-- `.gitignore` prevents session files from being committed
-- But YOU must not share credentials in prompts!
+- `.bobignore` and `.gitignore` reduce accidental access and commits
+- Ignore files do not sanitize pasted text, rotate a secret, or undo an exposure
+- Never share credentials in prompts, source files, screenshots, logs, or command output
 
 ## 🚨 What Happens if You Expose Credentials?
 
 If you accidentally commit credentials:
 
-1. Your IBM Cloud account will be suspended immediately
-2. You must remove the credential from repository history
-3. You must rotate/revoke the exposed credential
-4. Your account will be restored after verification
+1. Revoke or rotate the credential immediately
+2. Tell the repository owner and affected account owner
+3. Remove the credential from the current tree and repository history
+4. Review logs and account activity for misuse
+5. Contact IBM or hackathon support if account access is affected
+
+Deleting the current file is not enough because earlier commits may retain the value.
 
 ## 📝 How to Use Environment Variables
 
@@ -86,6 +89,7 @@ String apiKey = System.getenv("IBM_CLOUD_API_KEY");
 - [ ] Reviewed `git diff` for sensitive data
 - [ ] All credentials are in environment variables
 - [ ] No credentials shared with AI assistants
+- [ ] `python scripts/check_secrets.py` passes
 
 ## 🆘 Need Help?
 

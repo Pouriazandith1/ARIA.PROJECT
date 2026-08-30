@@ -1673,22 +1673,32 @@ A new environmental domain should not require rewriting the entire orchestration
 
 # 56. Current Implementation Boundary
 
-At Architecture v1.0, the repository is still a foundational project.
+At Architecture v1.0, the repository contains one bounded functional prototype.
 
-The architecture described here is therefore a target architecture.
+The prototype implements:
 
-The following are not automatically considered implemented:
+- structured manual evidence intake
+- evidence metadata for source, time, location, method, and quality
+- validation for required metadata, enumerated states, ranges, and future dates
+- deterministic soil, water, terrain, ecology, and regulatory findings
+- environmental-capacity status without a hidden composite score
+- evidence-linked explanations, uncertainty, missing-data states, and human review gates
+- a Streamlit interface, automated tests, CI, and a credential-pattern check
+
+The broader architecture described here remains a target architecture.
+
+The following are not implemented by this prototype:
 
 - agents
-- models
 - APIs
-- dashboards
 - external data connectors
 - regulatory databases
-- automated capacity scoring
+- independently validated scientific rules
+- multimodal and geospatial analysis
+- watsonx runtime integration
 - production infrastructure
 
-Each capability must earn its implementation status through the project's capability and validation process.
+The prototype's rules are illustrative and must not be represented as scientific validation, regulatory interpretation, approval, or production readiness.
 
 ---
 
